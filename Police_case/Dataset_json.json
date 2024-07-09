@@ -1,0 +1,111 @@
+[{"id": "63d8cdf40c4a63244741f0ed",
+    "email": "palmer_beasley@fitcore.finance",
+    "roles": [
+      "guest"
+    ],
+    "apiKey": "32c821a3-3f56-44b3-9b77-c3182bd3667b",
+    "profile": {
+      "dob": "1994-07-28",
+      "name": "Palmer Beasley",
+      "about": "Voluptate ut amet fugiat fugiat consequat. Ea velit adipisicing cillum dolor in non excepteur quis.",
+      "address": "70 Brightwater Court, Tibbie, Texas",
+      "company": "Fitcore",
+      "location": {
+        "lat": 15.180701,
+        "long": 96.694788
+      }
+    },
+    "username": "palmer94",
+    "createdAt": "2014-09-17T13:45:00.501Z",
+    "updatedAt": "2014-09-18T13:45:00.501Z"
+  },
+  {
+    "id": "63d8cdf4b48f802433e9cb1a",
+    "email": "christy_valdez@exoplode.rich",
+    "roles": [
+      "guest",
+      "admin"
+    ],
+    "apiKey": "e782acfe-88ef-4079-a668-6a0c2b84e091",
+    "profile": {
+      "dob": "1994-08-13",
+      "name": "Christy Valdez",
+      "about": "Elit commodo laboris anim mollit sint in ullamco reprehenderit velit reprehenderit veniam elit. Consequat mollit laboris ad culpa eiusmod tempor sunt minim ad nulla ex sint.",
+      "address": "22 Laurel Avenue, Cuylerville, New Mexico",
+      "company": "Exoplode",
+      "location": {
+        "lat": -80.172455,
+        "long": 60.674449
+      }
+    },
+    "username": "christy94",
+    "createdAt": "2011-10-19T02:10:47.948Z",
+    "updatedAt": "2011-10-20T02:10:47.948Z"
+  },
+  {
+    "id": "63d8cdf4891d04d92077bb8c",
+    "email": "riggs_castaneda@tropoli.ceo",
+    "roles": [
+      "admin",
+      "member"
+    ],
+    "apiKey": "6a8587a4-0cfe-45c7-b442-e65ae838a3e1",
+    "profile": {
+      "dob": "1992-05-02",
+      "name": "Riggs Castaneda",
+      "about": "Aliqua fugiat qui magna eu. Commodo est commodo ut enim sit consequat elit aute Lorem nisi et aliquip in anim.",
+      "address": "71 Caton Avenue, Felt, Virgin Islands",
+      "company": "Tropoli",
+      "location": {
+        "lat": 57.629444,
+        "long": -29.075049
+      }
+    },
+    "username": "riggs92",
+    "createdAt": "2014-03-24T09:29:31.726Z",
+    "updatedAt": "2014-03-25T09:29:31.726Z"
+  },
+  {
+    "id": "63d8cdf410a1e29fa1b19bd3",
+    "email": "huber_weaver@duoflex.archi",
+    "roles": [
+      "admin"
+    ],
+    "apiKey": "160eba1e-e35b-41a3-a78d-b719582ae1c4",
+    "profile": {
+      "dob": "1988-11-28",
+      "name": "Huber Weaver",
+      "about": "Duis magna proident dolor tempor id. Nisi eu dolor laborum ex id est mollit.",
+      "address": "74 Whitwell Place, Lynn, Maine",
+      "company": "Duoflex",
+      "location": {
+        "lat": -58.322406,
+        "long": -191.773455
+      }
+    },
+    "username": "huber88",
+    "createdAt": "2014-02-16T03:55:57.300Z",
+    "updatedAt": "2014-02-17T03:55:57.300Z"
+  },
+  {
+    "id": "63d8cdf489b0789f0ca56358",
+    "email": "sasha_crane@norsup.markets",
+    "roles": [
+      "admin"
+    ],
+    "apiKey": "4ee795b3-e007-4b84-bc72-2bc1bc44bc1c",
+    "profile": {
+      "dob": "1989-11-06",
+      "name": "Sasha Crane",
+      "about": "Voluptate consectetur Lorem amet nulla tempor ullamco dolor magna do. Laboris ad nostrud sunt consectetur qui sint.",
+      "address": "90 Paerdegat Avenue, Teasdale, Florida",
+      "company": "Norsup",
+      "location": {
+        "lat": 35.083572,
+        "long": 44.514467
+      }
+    },
+    "username": "sasha89",
+    "createdAt": "2010-12-27T05:16:03.115Z",
+    "updatedAt": "2010-12-28T05:16:03.115Z"
+  }]
