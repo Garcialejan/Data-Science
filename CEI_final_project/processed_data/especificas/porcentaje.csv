@@ -29,14 +29,14 @@ Cuencas Internas de Cataluña,Boadella,56.6
 Cuencas Internas de Cataluña,Catllar,9.04
 Cuencas Internas de Cataluña,Foix,88.92
 Cuencas Internas de Cataluña,La Baells,70.98
-Cuencas Internas de Cataluña,La Llosa del Cavall,65.65
+Cuencas Internas de Cataluña,La Llosa del Cavall,56.23
 Cuencas Internas de Cataluña,Riudecanyes,50.05
 Cuencas Internas de Cataluña,Sant Pons,77.22
 Cuencas Internas de Cataluña,Sau,62.02
 Cuencas Internas de Cataluña,Susqueda,69.92
 Cuencas Internas del País Vasco,Ibai-Eder,80.53
 Cuencas Internas del País Vasco,Urkulu,81.31
-Duero,"Agavanzal, Nª Sª de",83.74
+Duero,"Agavanzal, Nª Sª de",71.73
 Duero,Aguilar,52.26
 Duero,Aldeadávila,94.27
 Duero,Almendra,67.0
@@ -46,7 +46,7 @@ Duero,Burgomillodo,64.16
 Duero,Camporredondo,56.89
 Duero,Casares de Arbas,53.89
 Duero,Castro,90.71
-Duero,Castro de las Cogotas,53.7
+Duero,Castro de las Cogotas,45.99
 Duero,Cernadilla,49.14
 Duero,Cervera,60.34
 Duero,Compuerto,57.21
@@ -198,7 +198,7 @@ Guadalquivir,"Fernandina, La",54.01
 Guadalquivir,Francisco Abellán,52.28
 Guadalquivir,Fresneda,66.92
 Guadalquivir,Gergal,71.67
-Guadalquivir,Giribaile,39.54
+Guadalquivir,Giribaile,33.84
 Guadalquivir,Guadalmellato,59.53
 Guadalquivir,Guadalmena,56.51
 Guadalquivir,Guadalén,52.83
@@ -229,22 +229,22 @@ Guadalquivir,Sierra Boyera,64.82
 Guadalquivir,Siles,64.98
 Guadalquivir,Torre del Águila,41.63
 Guadalquivir,Tranco de Beas,55.86
-Guadalquivir,Vadomojón,53.25
+Guadalquivir,Vadomojón,45.58
 Guadalquivir,Villafranca,92.3
 Guadalquivir,Víboras,45.19
 Guadalquivir,Yeguas,54.76
 Guadalquivir,Zocueca,20.0
 Guadalquivir,Zufre,73.18
-Guadiana,"Aguijón, El",85.92
+Guadiana,"Aguijón, El",73.6
 Guadiana,Alange,50.47
 Guadiana,Alcollarín,30.87
-Guadiana,Andévalo,66.51
+Guadiana,Andévalo,54.54
 Guadiana,Boquerón,75.54
 Guadiana,Brovales,71.56
 Guadiana,Búrdalo,23.56
 Guadiana,Canchales,70.5
 Guadiana,Cancho del Fresno,74.81
-Guadiana,Castilseras,78.5
+Guadiana,Castilseras,63.87
 Guadiana,Chanza,61.95
 Guadiana,Cijara,54.73
 Guadiana,Cornalbo,15.29
@@ -257,17 +257,17 @@ Guadiana,Horno Tejero,81.39
 Guadiana,La Cabezuela,66.9
 Guadiana,La Colada,55.3
 Guadiana,La Serena,56.87
-Guadiana,Llerena,83.27
+Guadiana,Llerena,71.32
 Guadiana,Los Molinos,83.88
 Guadiana,Montijo,83.09
-Guadiana,Nogales,87.24
+Guadiana,Nogales,74.73
 Guadiana,Orellana,69.94
 Guadiana,Peñarroya,77.23
 Guadiana,Piedra Aguda,63.21
 Guadiana,Proserpina,81.03
 Guadiana,Pto. Vallehermoso,71.82
-Guadiana,Ruecas,66.92
-Guadiana,Sierra Brava,62.13
+Guadiana,Ruecas,65.02
+Guadiana,Sierra Brava,60.36
 Guadiana,Tentudia,67.12
 Guadiana,Torre de Abrahán,46.99
 Guadiana,Valuengo,72.8
@@ -280,14 +280,14 @@ Júcar,Algar,2.51
 Júcar,Amadorio,38.88
 Júcar,Arenós,37.34
 Júcar,Arquillo de San Blas,69.7
-Júcar,Bellús,16.39
+Júcar,Bellús,14.04
 Júcar,Benagéber,56.08
 Júcar,Beniarrés,51.8
 Júcar,Buseo,41.24
 Júcar,Contreras,28.0
 Júcar,Cortes II,91.43
 Júcar,El Naranjero,69.78
-Júcar,Escalona,4.8
+Júcar,Escalona,4.11
 Júcar,Forata,25.66
 Júcar,Guadalest,50.42
 Júcar,La Muela,66.37
@@ -296,7 +296,7 @@ Júcar,Loriguilla,27.97
 Júcar,María Cristina,20.41
 Júcar,Regajo,65.65
 Júcar,Sichar,59.74
-Júcar,Tous - La Ribera,26.83
+Júcar,Tous - La Ribera,22.98
 Júcar,Ulldecona,55.06
 Miño - Sil,Albarellos,44.84
 Miño - Sil,Bao,72.34
@@ -304,7 +304,7 @@ Miño - Sil,Belesar,59.25
 Miño - Sil,Bárcena,60.55
 Miño - Sil,"Campañana, La",66.16
 Miño - Sil,Castrelo,87.37
-Miño - Sil,Cenza,59.85
+Miño - Sil,Cenza,51.31
 Miño - Sil,Chandrexa,52.79
 Miño - Sil,"Conchas, Las",57.75
 Miño - Sil,Edrada-Mao,49.35
@@ -384,7 +384,7 @@ Tajo,Rosarito,59.74
 Tajo,Salor,54.38
 Tajo,San Juan,65.01
 Tajo,Santillana,69.66
-Tajo,"Tajera, La",34.15
+Tajo,"Tajera, La",33.18
 Tajo,Torcón,49.04
 Tajo,Torrejón (Tajo - Tietar),88.51
 Tajo,"Vado, El",46.57
