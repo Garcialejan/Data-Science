@@ -39,4 +39,4 @@ async def index(request: Request):
 @app.post("/predictdata", response_class=HTMLResponse)
 async def predict_datapoint(request:Request):
     if request.method == "POST":
-        
+        return print("Hello")
