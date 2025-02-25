@@ -1,26 +1,61 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>FWI Prediction</title>
+    <style>
+        .login {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .login h1 {
+            margin-bottom: 20px;
+        }
+        .login input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
     <div class="login">
-       <h1>FWI Prediction</h1>
-   
+        <h1>FWI Prediction</h1>
         <!-- Main Input For Receiving Query to our ML -->
-       <form action="{{ url_for('predict_datapoint')}}" method="post">
-         <input type="text" name="Temperature" placeholder="Temperature" required="required" /><br>
-           <input type="text" name="RH" placeholder="RH" required="required" /><br>
-           <input type="text" name="Ws" placeholder="Ws" required="required" /><br>
-           <input type="text" name="Rain" placeholder="Rain" required="required" /><br>
-           <input type="text" name="FFMC" placeholder="FFMC" required="required" /><br>
-           <input type="text" name="DMC" placeholder="DMC" required="required" /><br>
-           <input type="text" name="ISI" placeholder="ISI" required="required" /><br>
-           <input type="text" name="Classes" placeholder="Classes" required="required" /><br>
-           <input type="text" name="Region" placeholder="Region" required="required" /><br>
-   
-   
-   
-           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-       </form>
-    <h2>
-       THE FWI prediction is {{result}}
-    </h2>
-   <body>
+        <form action="{{ url_for('predict_datapoint_post') }}" method="post">
+            <input type="number" name="Temperature" placeholder="Temperature" required="required" /><br>
+            <input type="number" name="RH" placeholder="RH" required="required" /><br>
+            <input type="number" name="Ws" placeholder="Ws" required="required" /><br>
+            <input type="number" name="Rain" placeholder="Rain" required="required" /><br>
+            <input type="number" name="FFMC" placeholder="FFMC" required="required" /><br>
+            <input type="number" name="DMC" placeholder="DMC" required="required" /><br>
+            <input type="number" name="ISI" placeholder="ISI" required="required" /><br>
+            <input type="number" name="Classes" placeholder="Classes" required="required" /><br>
+            <input type="number" name="Region" placeholder="Region" required="required" /><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        {% if result is defined %}
+            <h2>
+                THE FWI prediction is {{ result }}
+            </h2>
+        {% endif %}
+    </div>
+</body>
 </html>
