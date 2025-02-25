@@ -59,3 +59,39 @@ async def predict_datapoint_post(request: Request,
         return templates.TemplateResponse('home.html', {"request": request, "result": result})
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error during prediction: {str(e)}")
+    
+    
+# Alternativa sin usar el BaseModel
+# @app.post("/predictdata", response_class=HTMLResponse)
+# async def predict_datapoint_post(request: Request,
+#                                  Temperature: float = Form(...),
+#                                  RH: float = Form(...),
+#                                  Ws: float = Form(...),
+#                                  Rain: float = Form(...),
+#                                  FFMC: float = Form(...),
+#                                  DMC: float = Form(...),
+#                                  ISI: float = Form(...),
+#                                  Classes: float = Form(...),
+#                                  Region: float = Form(...)):
+#     try:
+#         # Crear una instancia de InputData
+#         input_data = InputData(
+#             Temperature=Temperature,
+#             RH=RH,
+#             Ws=Ws,
+#             Rain=Rain,
+#             FFMC=FFMC,
+#             DMC=DMC,
+#             ISI=ISI,
+#             Classes=Classes,
+#             Region=Region
+#         )
+        
+#         # Convertir a lista y escalar
+#         input_list = list(input_data.dict().values())
+#         new_data_scaled = scaler.transform([input_list])
+#         result = model.predict(new_data_scaled)[0]
+        
+#         return templates.TemplateResponse('home.html', {"request": request, "result": result})
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=f"Error during prediction: {str(e)}")
