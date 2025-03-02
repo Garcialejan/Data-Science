@@ -1,0 +1,8 @@
+# Crear entorno y exportarlo a .yaml
+
+conda activate my_conda
+conda env export > my_conda.yaml
+
+# Instalar paquetes en nuevo entorno
+
+conda env create -f my_conda.yaml
