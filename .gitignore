@@ -2,5 +2,7 @@
 *.csv
 *.pdf
 *.png
+*.pkl
 .vscode
-*/mlruns
+**/mlruns/
+**/mlartifacts/
