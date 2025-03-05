@@ -3,6 +3,7 @@
 *.pdf
 *.png
 *.pkl
-.vscode
+.vscode*
+*.lnk
 **/mlruns/
 **/mlartifacts/
