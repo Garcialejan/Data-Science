@@ -1,4 +1,5 @@
 # DATA VERSION CONTROL (DVC)
-- Usaremos **GIT** para trackear y gurardar nuestras versiones del **código**.
-- Usaremos **DVC** para lo mismo, pero en este caso para los **datos**. Muchos de los comandos de DVC se heredan de GIT, por lo que tenemos mucho trabajo hecho.
+- Usaremos **GIT** para trackear nuestras versiones del **código**.
+- Usaremos **DVC** para trackear nuestras verisones de los **datos**. Muchos de los comandos de DVC se heredan de GIT, por lo que tenemos mucho trabajo hecho.
 - El archivo **data.extesion.dvc**, el cual se crea cuando trackeamos un fichero con `dvc add`, es el que **SÍ debeos trackear con GIT**, ya que este nos muestra la información de referencia del archivo donde se guardan los datos y puede estar en cualquier repositorio, bucket de S3, ... También se debe trackear el .gitignore que se crea automáticamente para no pushear otras carpetas innecesarias que se crean al trackear los datos con DVC.
+- Como cada vez que cambiamos los datos debemos hacer un commit para actualizar el archivo `data.extesion.dvc`, para **cambiar de versión de los datos** simplemente, por ejemplo, buscando una versión anterior, hacemos un `git checkout commit_hash` al commit con la versión de los datos que nos interesan, pero recuerda, el archivo no se trackea con git, así que para cambiarlo, basta con hacer un `dvc checkout` y ya tendremos los datos actualziados a la versión del commit al que nos hemos movido.
