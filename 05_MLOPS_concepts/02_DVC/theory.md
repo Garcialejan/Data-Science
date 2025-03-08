@@ -1,3 +1,4 @@
 # DATA VERSION CONTROL (DVC)
 - Usaremos **GIT** para trackear y gurardar nuestras versiones del **código**.
-- Usaremos **DVC** para lo mismo, pero en este caso para los **datos**. Muchos de los comandos y funcionalidades de DVC se heredan de GIT, por lo que tenemos mucho trabajo hecho.
+- Usaremos **DVC** para lo mismo, pero en este caso para los **datos**. Muchos de los comandos de DVC se heredan de GIT, por lo que tenemos mucho trabajo hecho.
+- El archivo **data.extesion.dvc**, el cual se crea cuando trackeamos un fichero con `dvc add`, es el que **SÍ debeos trackear con GIT**, ya que este nos muestra la información de referencia del archivo donde se guardan los datos y puede estar en cualquier repositorio, bucket de S3, ... También se debe trackear el .gitignore que se crea automáticamente para no pushear otras carpetas innecesarias que se crean al trackear los datos con DVC.
