@@ -13,6 +13,8 @@
 *.shx
 *.sbn
 *.shp.xml
+*.tif
+*.hgt
 .vscode*
 *.lnk
 *.parquet

@@ -70,8 +70,6 @@ Se recomienda definir el **spatial index** `s_index = gdf.sindex`, ya que es muc
 
 
 
-
-
 # Análisis raster con Python - Rasterio
 
 El **análisis ráster** es un tipo de análisis espacial que se realiza sobre datos en formato ráster (**imágenes satelitales o matrices de celdas**). A diferencia de los datos vectoriales (que representan objetos geográficos como puntos, líneas y polígonos), los datos ráster dividen la superficie terrestre en una cuadrícula de celdas (**píxeles**), donde cada celda tiene un valor asociado (por ejemplo, altitud, temperatura, uso del suelo, etc.). Aunque GeoPandas está diseñado principalmente para trabajar con datos vectoriales, se puede combinar su uso con otras bibliotecas especializadas en análisis ráster, como **Rasterio , Xarray o rioxarray**, para realizar análisis híbridos entre datos ráster y vectoriales.
