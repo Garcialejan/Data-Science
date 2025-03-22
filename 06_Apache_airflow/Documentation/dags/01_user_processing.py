@@ -33,7 +33,7 @@ with DAG(dag_id = "user_processing",
                 );
                 ''')
         # Para comprobar si un task funciona podemos abrir el bash dentro del contenedor (docker exec -it <nombre_cont> bash)
-        # y ejecutar #! airflow tasks <dag_id> [task_name]
+        # y ejecutar #! airflow tasks run <dag_id> [task_name]
 
 
 
