@@ -1,49 +1,52 @@
+# Esto nos permite escribir un fichero python con todo el código
+# que se encuentra en esta misma celda
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score,classification_report,confusion_matrix,precision_score
-import sklearn
-import joblib
-import boto3
-import pathlib
-from io import StringIO
-import argparse
 import os
+import boto3
+import pickle
+import sklearn
+import argparse 
+# Herramienta estándar que se utiliza para crear interfaces de línea de comandos (CLI)
+# Permite que un script Python acepte argumentos y opciones desde la terminal al ejecutarse. ```python mi_script.py --input archivo.txt --output resultado.txt --verbose```
 import numpy as np
 import pandas as pd
+from io import StringIO
+from pathlib import Path
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_score
 
 
-def model_fn(model_dir):
-    clf=joblib.load(os.path.join(model_dir,"model.joblib"))
-
-if __name__=="__main__":
-
+def model_fn(model_dir: Path):
+    clf = pickle.load(os.path.join(model_dir, "model.joblib"))
+    
+if __name__ == "__main__":
+    
     print("[Info] Extracting arguments")
-    parser=argparse.ArgumentParser()
+    parser = argparse.ArgumentParser()
+    
+    ## Hyperparameter for the model
+    parser.add_argument("--n_estimators", type=int, default=100)
+    parser.add_argument("--random_state", type=int, default=42)
 
-    ## Hyperparameter
-    parser.add_argument("--n_estimators",type=int,default=100)
-    parser.add_argument("--random_state",type=int,default=0)
-
-    ### Data,model,and output directories
+    ### Data,model,and output directories. Setup environments variables to define where my data and models are.
     parser.add_argument("--model-dir", type=str, default=os.environ.get("SM_MODEL_DIR"))
     parser.add_argument("--train", type=str, default=os.environ.get("SM_CHANNEL_TRAIN"))
     parser.add_argument("--test", type=str, default=os.environ.get("SM_CHANNEL_TEST"))
     parser.add_argument("--train-file", type=str, default="train-V-1.csv")
     parser.add_argument("--test-file", type=str, default="test-V-1.csv")
-
+    
     args, _ =parser.parse_known_args()
 
     print("SKLearn Version: ", sklearn.__version__)
-    print("Joblib Version: ", joblib.__version__)
-
     print("[INFO] Reading data")
     print()
+    
     train_df = pd.read_csv(os.path.join(args.train, args.train_file))
     test_df = pd.read_csv(os.path.join(args.test, args.test_file))
 
     features = list(train_df.columns)
     label = features.pop(-1)
-
+    
     print("Building training and testing datasets")
     print()
     X_train = train_df[features]
@@ -68,21 +71,22 @@ if __name__=="__main__":
     print(X_test.shape)
     print(y_test.shape)
     print()
-
-
+    
     print("Training RandomForest Model ....")
     print()
-    model=RandomForestClassifier(n_estimators=args.n_estimators,random_state=args.random_state,
-                                 verbose=2,n_jobs=1)
+    model=RandomForestClassifier(n_estimators=args.n_estimators,
+                                 random_state=args.random_state,
+                                 verbose=2,
+                                 n_jobs=-1)
     
     model.fit(X_train,y_train)
 
     print()
 
-    model_path=os.path.join(args.model_dir,"model.joblib")
-    joblib.dump(model,model_path)
+    model_path = os.path.join(args.model_dir,"model.joblib")
+    pickle.save(model,model_path)
 
-    print("Model saved at" + model_path)
+    print(f"Model saved at {model_path}")
 
     y_pred_test = model.predict(X_test)
     test_acc = accuracy_score(y_test,y_pred_test)
@@ -91,9 +95,7 @@ if __name__=="__main__":
     print()
     print("---- METRICS RESULTS FOR TESTING DATA ----")
     print()
-    print("Total Rows are: ", X_test.shape[0])
-    print('[TESTING] Model Accuracy is: ', test_acc)
+    print(f"Total Rows are: {X_test.shape[0]}")
+    print(f'[TESTING] Model Accuracy is: {test_acc}')
     print('[TESTING] Testing Report: ')
     print(test_rep)
-
-
