@@ -17,7 +17,10 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 
 def model_fn(model_dir: Path):
-    clf = pickle.load(os.path.join(model_dir, "model.joblib"))
+    model_path = os.path.join(model_dir, "model.pkl")
+    with open(model_path, 'rb') as f:
+        model = pickle.load(f)
+    return model
     
 if __name__ == "__main__":
     
@@ -83,8 +86,10 @@ if __name__ == "__main__":
 
     print()
 
-    model_path = os.path.join(args.model_dir,"model.joblib")
-    pickle.save(model,model_path)
+    model_path = os.path.join(args.model_dir, "model.pkl")
+    print(f"[INFO] Saving model to {model_path}")
+    with open(model_path, "wb") as f:
+        pickle.dump(model, f)
 
     print(f"Model saved at {model_path}")
 
